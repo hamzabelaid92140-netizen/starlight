@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -232,36 +232,31 @@
   <!-- Bottom 3 Altar Drop Slots (Zero Text) -->
   <div id="altar-container" class="fixed bottom-7 sm:bottom-10 left-0 right-0 z-10 flex items-center justify-center gap-5 sm:gap-10 md:gap-14 px-4">
 
-    <!-- SLOT 0: be_a_star.mp3 (Star / Celestial Eye Sigil) -->
+    <!-- SLOT 0: be_a_star.mp3 -->
     <div id="slot-0" data-slot="0" class="relic-slot slot-float-1 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl flex items-center justify-center cursor-pointer">
       <input type="file" accept=".mp3,audio/*" class="hidden slot-input" data-slot="0" />
-      <!-- Unsealed Sigil SVG -->
       <svg class="sigil-icon w-14 h-14 sm:w-16 sm:h-16 transition-all duration-500" viewBox="0 0 80 80" fill="none">
         <circle cx="40" cy="40" r="32" stroke="rgba(255,0,221,0.4)" stroke-width="1" stroke-dasharray="4 4" class="sigil-spin"/>
         <polygon points="40,10 47,31 69,31 51,44 58,66 40,52 22,66 29,44 11,31 33,31"
                  stroke="#00fff2" stroke-width="1.6" fill="rgba(0,255,242,0.08)" stroke-linejoin="round"/>
         <circle cx="40" cy="40" r="5" fill="#ff00dd" class="sigil-ring"/>
       </svg>
-      <!-- Locked File Icon (Hidden initially) -->
       <div class="locked-file-icon hidden absolute inset-0 flex items-center justify-center z-10">
         <svg class="w-12 h-12 sm:w-14 sm:h-14 drop-shadow-[0_0_14px_rgba(255,230,150,0.95)]" viewBox="0 0 64 64" fill="none">
           <path d="M16 8H38L50 20V54C50 56.2 48.2 58 46 58H16C13.8 58 12 56.2 12 54V12C12 9.8 13.8 8 16 8Z"
                 fill="rgba(255,235,175,0.22)" stroke="#ffe89e" stroke-width="2.2" stroke-linejoin="round"/>
           <path d="M38 8V20H50" stroke="#ffe89e" stroke-width="2.2" stroke-linejoin="round"/>
-          <!-- Audio Waveform / Note inside File -->
           <path d="M27 44V31L39 28V41" stroke="#00fff2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="24" cy="44" r="3.5" fill="#ff00dd"/>
           <circle cx="36" cy="41" r="3.5" fill="#ff00dd"/>
         </svg>
       </div>
-      <!-- Animated Chains Canvas -->
       <canvas id="chain-canvas-0" class="chain-canvas"></canvas>
     </div>
 
-    <!-- SLOT 1: caméléon.mp3 (Kaleidoscope / Chameleon Iris Sigil) -->
+    <!-- SLOT 1: caméléon.mp3 -->
     <div id="slot-1" data-slot="1" class="relic-slot slot-float-2 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl flex items-center justify-center cursor-pointer">
       <input type="file" accept=".mp3,audio/*" class="hidden slot-input" data-slot="1" />
-      <!-- Unsealed Sigil SVG -->
       <svg class="sigil-icon w-14 h-14 sm:w-16 sm:h-16 transition-all duration-500" viewBox="0 0 80 80" fill="none">
         <circle cx="40" cy="40" r="33" stroke="rgba(0,255,242,0.45)" stroke-width="1.2" class="sigil-spin-reverse"/>
         <path d="M10 40C18 24 30 18 40 18C50 18 62 24 70 40C62 56 50 62 40 62C30 62 18 56 10 40Z"
@@ -269,7 +264,6 @@
         <circle cx="40" cy="40" r="11" stroke="#39ff14" stroke-width="1.6" stroke-dasharray="3 2" class="sigil-spin"/>
         <ellipse cx="40" cy="40" rx="3.2" ry="8" fill="#00fff2"/>
       </svg>
-      <!-- Locked File Icon -->
       <div class="locked-file-icon hidden absolute inset-0 flex items-center justify-center z-10">
         <svg class="w-12 h-12 sm:w-14 sm:h-14 drop-shadow-[0_0_14px_rgba(255,230,150,0.95)]" viewBox="0 0 64 64" fill="none">
           <path d="M16 8H38L50 20V54C50 56.2 48.2 58 46 58H16C13.8 58 12 56.2 12 54V12C12 9.8 13.8 8 16 8Z"
@@ -280,21 +274,18 @@
           <circle cx="36" cy="41" r="3.5" fill="#00fff2"/>
         </svg>
       </div>
-      <!-- Animated Chains Canvas -->
       <canvas id="chain-canvas-1" class="chain-canvas"></canvas>
     </div>
 
-    <!-- SLOT 2: maybe we'll see the angels one day.mp3 (Seraphic Wings / Halo Sigil) -->
+    <!-- SLOT 2: maybe we'll see the angels one day.mp3 -->
     <div id="slot-2" data-slot="2" class="relic-slot slot-float-3 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl flex items-center justify-center cursor-pointer">
       <input type="file" accept=".mp3,audio/*" class="hidden slot-input" data-slot="2" />
-      <!-- Unsealed Sigil SVG -->
       <svg class="sigil-icon w-14 h-14 sm:w-16 sm:h-16 transition-all duration-500" viewBox="0 0 80 80" fill="none">
         <ellipse cx="40" cy="21" rx="16" ry="5" stroke="#ffe89e" stroke-width="1.6" class="sigil-ring"/>
         <path d="M40 32C28 24 14 26 9 37C17 38 24 41 29 47C21 47 15 51 13 57C23 56 32 53 40 46C48 53 57 56 67 57C65 51 59 47 51 47C56 41 63 38 71 37C66 26 52 24 40 32Z"
               stroke="#00fff2" stroke-width="1.6" fill="rgba(0,255,242,0.08)" stroke-linejoin="round"/>
         <circle cx="40" cy="40" r="3.5" fill="#ffe89e"/>
       </svg>
-      <!-- Locked File Icon -->
       <div class="locked-file-icon hidden absolute inset-0 flex items-center justify-center z-10">
         <svg class="w-12 h-12 sm:w-14 sm:h-14 drop-shadow-[0_0_14px_rgba(255,230,150,0.95)]" viewBox="0 0 64 64" fill="none">
           <path d="M16 8H38L50 20V54C50 56.2 48.2 58 46 58H16C13.8 58 12 56.2 12 54V12C12 9.8 13.8 8 16 8Z"
@@ -305,7 +296,6 @@
           <circle cx="36" cy="41" r="3.5" fill="#ffe89e"/>
         </svg>
       </div>
-      <!-- Animated Chains Canvas -->
       <canvas id="chain-canvas-2" class="chain-canvas"></canvas>
     </div>
 
@@ -323,7 +313,6 @@
       // =========================================================================
       const TARGET_REDIRECT_URL = 'https://hamzabelaid92140-netizen.github.io/Seraphin/';
 
-      // Normalize strings (NFC + lowercase + trim) so accented characters like 'é' match across macOS/Windows/Linux
       function normalizeFilename(name) {
         return (name || '')
           .normalize('NFC')
@@ -345,6 +334,8 @@
         climaxActive: false,
         climaxStartTime: 0,
         climaxProgress: 0,
+        redirectStarted: false,
+        loopStarted: false,
         audioStarted: false,
         audioEnergy: 0,
         mouse: { x: 0.5, y: 0.5, tx: 0.5, ty: 0.5 }
@@ -403,7 +394,6 @@
 
         _buildLiminalDrone() {
           const now = this.ctx.currentTime;
-          // Detuned eerie minor-9th / tritone dreamcore pad
           const freqs = [65.41, 98.00, 130.81, 155.56, 196.00, 293.66];
           freqs.forEach((f, idx) => {
             const osc = this.ctx.createOscillator();
@@ -415,7 +405,6 @@
             osc.type = idx % 2 === 0 ? 'sawtooth' : 'triangle';
             osc.frequency.setValueAtTime(f, now);
 
-            // Slow eerie pitch drift
             lfo.type = 'sine';
             lfo.frequency.setValueAtTime(0.08 + idx * 0.03, now);
             lfoGain.gain.setValueAtTime(1.4 + idx * 0.3, now);
@@ -442,7 +431,6 @@
           const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
           const data = buffer.getChannelData(0);
 
-          // Pink-ish analog tape noise + occasional micro-crackle
           let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
           for (let i = 0; i < bufferSize; i++) {
             const white = Math.random() * 2 - 1;
@@ -455,7 +443,6 @@
             let sample = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
             b6 = white * 0.115926;
 
-            // Analog vinyl/VHS dust pop
             if (Math.random() < 0.0004) {
               sample += (Math.random() * 2 - 1) * 0.35;
             }
@@ -466,7 +453,6 @@
           noise.buffer = buffer;
           noise.loop = true;
 
-          // Bandpass sweep for hollow liminal wind
           const bandpass = this.ctx.createBiquadFilter();
           bandpass.type = 'bandpass';
           bandpass.frequency.setValueAtTime(520, this.ctx.currentTime);
@@ -479,7 +465,6 @@
           windLfo.connect(windLfoGain);
           windLfoGain.connect(bandpass.frequency);
 
-          // High-shelf tape hiss
           const hissFilter = this.ctx.createBiquadFilter();
           hissFilter.type = 'highpass';
           hissFilter.frequency.setValueAtTime(3400, this.ctx.currentTime);
@@ -543,7 +528,6 @@
           if (!this.ctx) return;
           const now = this.ctx.currentTime;
 
-          // Harsh distorted low buzz + frequency-modulated static burst
           const osc1 = this.ctx.createOscillator();
           const osc2 = this.ctx.createOscillator();
           const mod = this.ctx.createOscillator();
@@ -551,7 +535,6 @@
           const dist = this.ctx.createWaveShaper();
           const gain = this.ctx.createGain();
 
-          // Distortion curve
           const curve = new Float32Array(256);
           for (let i = 0; i < 256; i++) {
             const x = (i * 2) / 256 - 1;
@@ -595,7 +578,6 @@
           if (!this.ctx) return;
           const now = this.ctx.currentTime;
 
-          // Metallic chain clinks (staggered)
           for (let i = 0; i < 6; i++) {
             const t = now + i * 0.065;
             const clink = this.ctx.createOscillator();
@@ -621,7 +603,6 @@
             clink.stop(t + 0.1);
           }
 
-          // Deep resonant seal impact + celestial harmonic chord
           const baseFreqs = [261.63, 329.63, 392.00];
           const root = baseFreqs[slotIndex % 3];
           [root, root * 1.5, root * 2].forEach((freq, idx) => {
@@ -643,7 +624,6 @@
 
         playClimaxSequence() {
           this.init();
-          // Attempt to play external "i think we should get married.mp3" if available
           const audioEl = document.getElementById('climax-audio-file');
           let externalPlayed = false;
 
@@ -654,19 +634,16 @@
               playPromise
                 .then(() => {
                   externalPlayed = true;
-                  // Fade down procedural drone so the MP3 shines cleanly
                   if (this.ambienceGain && this.ctx) {
                     this.ambienceGain.gain.exponentialRampToValueAtTime(0.02, this.ctx.currentTime + 1.0);
                   }
                 })
                 .catch(() => {
-                  // Fallback to rich synthesized ethereal wedding music-box & choir climax
                   this._playSynthesizedWeddingClimax();
                 });
             }
           }
 
-          // Also trigger subtle angelic swell if external file fails or takes time to load
           setTimeout(() => {
             if (!externalPlayed && (!audioEl || audioEl.paused)) {
               this._playSynthesizedWeddingClimax();
@@ -682,16 +659,15 @@
             this.ambienceGain.gain.exponentialRampToValueAtTime(0.03, now + 0.8);
           }
 
-          // Haunting, nostalgic dreamcore wedding motif (Canon / Bridal interval + celestial choir)
           const melody = [
-            { f: 523.25, t: 0.0, d: 0.9 },   // C5
-            { f: 698.46, t: 0.65, d: 0.9 },  // F5
-            { f: 698.46, t: 1.3, d: 0.9 },   // F5
-            { f: 698.46, t: 1.95, d: 1.2 },  // F5
-            { f: 523.25, t: 2.75, d: 0.7 },  // C5
-            { f: 783.99, t: 3.3, d: 0.7 },   // G5
-            { f: 659.25, t: 3.85, d: 0.7 },  // E5
-            { f: 698.46, t: 4.35, d: 1.4 }   // F5
+            { f: 523.25, t: 0.0, d: 0.9 },
+            { f: 698.46, t: 0.65, d: 0.9 },
+            { f: 698.46, t: 1.3, d: 0.9 },
+            { f: 698.46, t: 1.95, d: 1.2 },
+            { f: 523.25, t: 2.75, d: 0.7 },
+            { f: 783.99, t: 3.3, d: 0.7 },
+            { f: 659.25, t: 3.85, d: 0.7 },
+            { f: 698.46, t: 4.35, d: 1.4 }
           ];
 
           melody.forEach((note) => {
@@ -720,7 +696,6 @@
             overtone.stop(t + note.d + 0.6);
           });
 
-          // Ascending angelic choir shimmer over 5 seconds
           const choirFreqs = [261.63, 349.23, 440.00, 523.25, 698.46, 1046.50];
           choirFreqs.forEach((f, idx) => {
             const osc = this.ctx.createOscillator();
@@ -761,7 +736,6 @@
 
       const audioEngine = new WeirdcoreAudioEngine();
 
-      // Start ambient audio upon any first user interaction
       ['pointerdown', 'dragenter', 'keydown'].forEach((evt) => {
         window.addEventListener(evt, () => audioEngine.init(), { once: true });
       });
@@ -830,19 +804,16 @@
           return mat2(c, -s, s, c);
         }
 
-        // Ultra-saturated weirdcore palette
         vec3 weirdPalette(float t) {
           vec3 a = vec3(0.55, 0.45, 0.65);
           vec3 b = vec3(0.55, 0.55, 0.55);
           vec3 c = vec3(1.0, 1.0, 1.0);
           vec3 d = vec3(0.00, 0.33, 0.67);
           vec3 col = a + b * cos(TAU * (c * t + d));
-          // Boost saturation aggressively
           float luma = dot(col, vec3(0.299, 0.587, 0.114));
           return clamp(mix(vec3(luma), col, 1.85), 0.0, 1.0);
         }
 
-        // Surreal all-seeing dreamcore eye SDF
         float eyeField(vec2 p, float blink) {
           p.y /= max(0.08, blink);
           float upper = p.y - (0.28 - 0.55 * p.x * p.x);
@@ -855,18 +826,15 @@
           vec2 p = (uv - 0.5) * aspect;
           vec2 m = (u_mouse - 0.5) * aspect;
 
-          // Subtle hypnotic drift toward cursor
           p -= m * 0.12;
 
           float r = length(p);
           float a = atan(p.y, p.x);
 
-          // Kaleidoscopic folding intensity grows with locked slots & climax
           float folds = 6.0 + u_lockedCount * 2.0;
           float ka = mod(a + t * 0.18, TAU / folds) - PI / folds;
           vec2 kp = vec2(cos(ka), abs(sin(ka))) * r;
 
-          // Domain-warped dreamcore clouds / liminal void
           vec2 q = vec2(
             fbm(kp * 3.2 + vec2(0.0, t * 0.22)),
             fbm(kp * 3.2 + vec2(5.2, -t * 0.19))
@@ -877,46 +845,38 @@
           );
           float nebula = fbm(kp * 3.8 + 3.5 * warp);
 
-          // Infinite liminal checkerboard horizon tunnel
           float z = 0.38 / (abs(p.y) + 0.14);
           vec2 gridUv = vec2(p.x * z + sin(t * 0.4) * 0.6, z + t * 1.4);
           vec2 checker = floor(gridUv * 2.5);
           float checkPattern = mod(checker.x + checker.y, 2.0);
           float horizonFade = smoothstep(0.02, 0.35, abs(p.y));
 
-          // Color synthesis: deep magenta, electric cyan, toxic lime, ultraviolet
           vec3 col1 = weirdPalette(nebula * 1.4 + t * 0.08 + u_lockedCount * 0.15);
-          vec3 col2 = vec3(1.0, 0.04, 0.78); // Ultra-saturated hot magenta
-          vec3 col3 = vec3(0.0, 0.98, 0.95); // Electric cyan
-          vec3 col4 = vec3(0.22, 1.0, 0.08); // Toxic weirdcore green
+          vec3 col2 = vec3(1.0, 0.04, 0.78);
+          vec3 col3 = vec3(0.0, 0.98, 0.95);
+          vec3 col4 = vec3(0.22, 1.0, 0.08);
 
           vec3 bg = mix(col1, col2, smoothstep(0.2, 0.85, q.x));
           bg = mix(bg, col3, smoothstep(0.35, 0.9, warp.y) * 0.65);
           bg += col4 * pow(max(0.0, sin(nebula * 14.0 - t * 2.0)), 8.0) * 0.45;
 
-          // Blend subtle liminal tiled floor/ceiling in distance
           vec3 tileCol = mix(vec3(0.05, 0.0, 0.14), vec3(0.95, 0.0, 0.85), checkPattern);
           bg = mix(bg, tileCol, (1.0 - horizonFade) * 0.38 * (1.0 - smoothstep(0.0, 0.45, r)));
 
-          // Central Seraphic Halo & Hypnotic Eye
           vec2 eyeP = (uv - 0.5) * aspect * 1.65;
           eyeP = rot2d(sin(t * 0.6) * 0.08) * eyeP;
 
-          // Pulsing sacred rings around the eye
           float halo1 = abs(length(eyeP) - (0.48 + 0.03 * sin(t * 3.0 + u_audio * 4.0)));
           float haloGlow = 0.012 / (halo1 + 0.006);
           float spokes = pow(max(0.0, cos(atan(eyeP.y, eyeP.x) * (12.0 + u_lockedCount * 4.0) + t * 1.5)), 12.0);
           bg += mix(col3, vec3(1.0, 0.92, 0.55), u_lockedCount / 3.0) * haloGlow * (0.45 + 0.55 * spokes);
 
-          // Blinking Eye Geometry
           float blink = 0.85 + 0.15 * sin(t * 1.3) * smoothstep(0.85, 1.0, sin(t * 0.45));
           float eyeDist = eyeField(eyeP, blink);
           if (eyeDist < 0.0) {
-            // Sclera with surreal iridescent veins
             float scleraMask = smoothstep(0.0, -0.03, eyeDist);
             vec3 sclera = vec3(0.96, 0.94, 1.0) - vec3(0.8, 0.1, 0.6) * fbm(eyeP * 18.0 + t) * 0.35;
 
-            // Iris
             vec2 irisP = eyeP - m * 0.18;
             float irisR = length(irisP);
             float irisAngle = atan(irisP.y, irisP.x);
@@ -935,7 +895,6 @@
             bg = mix(bg, eyeColor, scleraMask);
           }
 
-          // Eye rim neon outline
           float rimGlow = 0.008 / (abs(eyeDist) + 0.007);
           bg += vec3(1.0, 0.15, 0.9) * rimGlow * 0.55;
 
@@ -946,17 +905,14 @@
           vec2 uv = v_uv;
           float t = u_time;
 
-          // CRT Barrel Distortion
           vec2 centered = uv * 2.0 - 1.0;
           centered *= 1.0 + 0.065 * dot(centered, centered);
           vec2 crtUv = centered * 0.5 + 0.5;
 
-          // Glitch horizontal tear displacement
           float glitchSlice = hash(vec2(floor(crtUv.y * 28.0), floor(t * 24.0)));
           float tear = (glitchSlice - 0.5) * 0.18 * u_glitch * step(0.65, glitchSlice);
           crtUv.x += tear;
 
-          // Chromatic Aberration (RGB split)
           float distFromCenter = length(crtUv - 0.5);
           float aberr = (0.0055 + 0.012 * pow(distFromCenter, 2.0) + u_glitch * 0.045 + u_audio * 0.006);
 
@@ -966,22 +922,18 @@
 
           vec3 color = vec3(colR.r, colG.g, colB.b);
 
-          // Analog VHS Scanlines & subtle tracking bar
           float scanline = sin(crtUv.y * u_resolution.y * 1.35) * 0.08;
           float vhsBar = smoothstep(0.96, 1.0, sin(crtUv.y * 6.0 - t * 2.2)) * 0.14;
           color -= scanline;
           color += vec3(0.8, 0.2, 1.0) * vhsBar;
 
-          // Film grain
           float grain = (hash(crtUv * u_resolution + fract(t * 60.0) * 100.0) - 0.5) * 0.075;
           color += grain;
 
-          // Ultra-saturation boost & contrast curve
           color = pow(max(color, 0.0), vec3(0.92));
           float lum = dot(color, vec3(0.299, 0.587, 0.114));
           color = mix(vec3(lum), color, 1.45);
 
-          // Climax transcendent angelic light expansion
           if (u_climax > 0.0) {
             float rays = pow(max(0.0, cos(atan(crtUv.y - 0.45, crtUv.x - 0.5) * 16.0 + t * 4.0)), 4.0);
             float burst = smoothstep(1.3 - u_climax * 1.45, 0.0, length(crtUv - vec2(0.5, 0.45)));
@@ -1067,9 +1019,9 @@
         fxCanvas.height = window.innerHeight * dpr;
         fxCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-        // Resize each slot's chain canvas
         [0, 1, 2].forEach((idx) => {
           const c = document.getElementById(`chain-canvas-${idx}`);
+          if (!c) return;
           const rect = c.getBoundingClientRect();
           c.width = Math.max(220, rect.width * dpr);
           c.height = Math.max(220, rect.height * dpr);
@@ -1077,7 +1029,6 @@
       }
 
       window.addEventListener('resize', resizeCanvases);
-      resizeCanvases();
 
       window.addEventListener('pointermove', (e) => {
         state.mouse.tx = e.clientX / Math.max(1, window.innerWidth);
@@ -1103,7 +1054,6 @@
         ctx.save();
         for (let i = 0; i <= linkCount; i++) {
           const t = i / linkCount;
-          // Catenary sag + subtle vibrating tension
           const vib = Math.sin(time * 7.0 + i * 0.9 + seed) * 1.1 * (1.0 - Math.min(1, progress * 0.8));
           const curveOffset = Math.sin(t * Math.PI) * sag + vib;
 
@@ -1114,14 +1064,12 @@
           ctx.translate(px, py);
           ctx.rotate(angle + (i % 2 === 0 ? 0.14 : -0.14));
 
-          // Outer dark shadow aura
           ctx.strokeStyle = 'rgba(10, 0, 20, 0.9)';
           ctx.lineWidth = 5.5;
           ctx.beginPath();
           ctx.ellipse(0, 0, 8.5, 4.6, 0, 0, Math.PI * 2);
           ctx.stroke();
 
-          // Metallic chrome / divine gold-tinted chain link
           const grad = ctx.createLinearGradient(-8, -5, 8, 5);
           grad.addColorStop(0, '#ffe89e');
           grad.addColorStop(0.35, '#ffffff');
@@ -1134,7 +1082,6 @@
           ctx.ellipse(0, 0, 8, 4.2, 0, 0, Math.PI * 2);
           ctx.stroke();
 
-          // Specular highlight dot
           ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
           ctx.fillRect(-3, -2.5, 4, 1.2);
 
@@ -1149,7 +1096,6 @@
         ctx.translate(cx, cy);
         ctx.scale(scale, scale);
 
-        // Glowing aura behind central lock
         const glow = ctx.createRadialGradient(0, 0, 2, 0, 0, 26);
         glow.addColorStop(0, 'rgba(255, 235, 160, 0.85)');
         glow.addColorStop(0.5, 'rgba(255, 0, 212, 0.35)');
@@ -1159,7 +1105,6 @@
         ctx.arc(0, 0, 26, 0, Math.PI * 2);
         ctx.fill();
 
-        // Padlock shackle
         ctx.strokeStyle = '#fff5cc';
         ctx.lineWidth = 3.2;
         ctx.beginPath();
@@ -1169,7 +1114,6 @@
         ctx.lineTo(-7.5, -1);
         ctx.stroke();
 
-        // Padlock body (ornate diamond/shield)
         ctx.fillStyle = '#180828';
         ctx.strokeStyle = '#ffe28a';
         ctx.lineWidth = 2.2;
@@ -1178,7 +1122,6 @@
         ctx.fill();
         ctx.stroke();
 
-        // Glowing keyhole
         ctx.fillStyle = '#00fff2';
         ctx.beginPath();
         ctx.arc(0, 5, 2.3, 0, Math.PI * 2);
@@ -1190,6 +1133,7 @@
 
       function renderChainsForSlot(idx, time) {
         const canvas = document.getElementById(`chain-canvas-${idx}`);
+        if (!canvas) return;
         const ctx = canvas.getContext('2d');
         const w = canvas.width;
         const h = canvas.height;
@@ -1198,7 +1142,6 @@
         const p = state.chainProgress[idx];
         if (p <= 0.001) return;
 
-        // Inner box bounds (since canvas is 190% of slot size, box is roughly from 23.7% to 76.3%)
         const padX = w * 0.22;
         const padY = h * 0.22;
         const left = padX;
@@ -1208,7 +1151,6 @@
         const cx = w * 0.5;
         const cy = h * 0.5;
 
-        // 4 heavy diagonal & wrapping chains snapping across the slot
         const p1 = Math.min(1, p * 1.45);
         const p2 = Math.min(1, Math.max(0, (p - 0.12) * 1.45));
         const p3 = Math.min(1, Math.max(0, (p - 0.24) * 1.45));
@@ -1219,7 +1161,6 @@
         drawChainStrand(ctx, left - 14, cy - 14, right + 14, cy + 16, 8, p3, time, idx * 3 + 3);
         drawChainStrand(ctx, cx - 12, top - 14, cx + 12, bottom + 14, -6, p4, time, idx * 3 + 4);
 
-        // Central mystic padlock snaps shut at the end of chain animation
         const lockScale = Math.max(0, (p - 0.65) / 0.35);
         const bounce = lockScale > 0 ? Math.sin(lockScale * Math.PI * 0.75) * 1.18 : 0;
         drawPadlockSeal(ctx, cx, cy + 18, bounce, time);
@@ -1232,16 +1173,14 @@
         audioEngine.playErrorGlitch();
         state.glitchIntensity = 1.0;
 
-        // Screen flash
         const flash = document.getElementById('glitch-flash');
         flash.style.opacity = '0.75';
         setTimeout(() => { flash.style.opacity = '0.25'; }, 70);
         setTimeout(() => { flash.style.opacity = '0.6'; }, 140);
         setTimeout(() => { flash.style.opacity = '0'; }, 260);
 
-        // Slot violent shake
         slotEl.classList.remove('error-shake');
-        void slotEl.offsetWidth; // Force reflow
+        void slotEl.offsetWidth;
         slotEl.classList.add('error-shake');
         setTimeout(() => {
           slotEl.classList.remove('error-shake');
@@ -1274,7 +1213,6 @@
           );
         }
 
-        // Check if all 3 slots are now sealed
         if (state.locked.every(Boolean)) {
           setTimeout(beginFinalClimax, 650);
         }
@@ -1294,7 +1232,6 @@
         }
       }
 
-      // Prevent browser from opening dropped files anywhere on window
       ['dragenter', 'dragover', 'dragleave', 'drop'].forEach((eventName) => {
         window.addEventListener(eventName, (e) => {
           e.preventDefault();
@@ -1337,7 +1274,6 @@
           }
         });
 
-        // Clicking an unlocked slot opens native file selector as an intuitive fallback
         slotEl.addEventListener('click', () => {
           audioEngine.init();
           if (!state.locked[slotIndex] && !state.climaxActive && fileInput) {
@@ -1357,14 +1293,29 @@
       });
 
       // =========================================================================
-      // 7. FINAL 5-SECOND CLIMAX & REDIRECT SEQUENCE
+      // 7. FINAL 5-SECOND CLIMAX, LAUNCH & CLOSE SEQUENCE
       // =========================================================================
+      function launchSeraphinThenClose() {
+        if (state.redirectStarted) return;
+        state.redirectStarted = true;
+
+        // Navigate to Seraphin first so the target URL loads cleanly
+        window.location.href = TARGET_REDIRECT_URL;
+
+        // Attempt to close the window shortly after starting navigation
+        // (Browsers only allow window.close() on script-opened tabs/windows)
+        setTimeout(() => {
+          try {
+            window.close();
+          } catch (_) {}
+        }, 350);
+      }
+
       function beginFinalClimax() {
         if (state.climaxActive) return;
         state.climaxActive = true;
         state.climaxStartTime = performance.now();
 
-        // Play "i think we should get married.mp3" for 5 seconds
         audioEngine.playClimaxSequence();
 
         const bloomEl = document.getElementById('divine-bloom');
@@ -1378,16 +1329,7 @@
           { duration: 5000, easing: 'cubic-bezier(0.45, 0, 0.85, 0.2)', fill: 'forwards' }
         );
 
-        // Exactly 5 seconds later: navigate to Seraphin and attempt window close
-        setTimeout(() => {
-          try {
-            window.open(TARGET_REDIRECT_URL, '_blank');
-          } catch (_) {}
-          window.location.href = TARGET_REDIRECT_URL;
-          try {
-            window.close();
-          } catch (_) {}
-        }, 5000);
+        setTimeout(launchSeraphinThenClose, 5000);
       }
 
       // =========================================================================
@@ -1400,7 +1342,6 @@
 
         const speedMult = state.climaxActive ? 1.0 + state.climaxProgress * 9.0 : 1.0 + state.audioEnergy * 1.5;
 
-        // Floating weirdcore dust motes / ascending light sparks
         particles.forEach((pt) => {
           pt.x += pt.vx * speedMult;
           pt.y += pt.vy * speedMult;
@@ -1427,12 +1368,12 @@
           fxCtx.restore();
         });
 
-        // Subtle energy tethers connecting locked slots toward center eye
         const cx = w * 0.5;
         const cy = h * 0.45;
         [0, 1, 2].forEach((idx) => {
           if (!state.locked[idx]) return;
           const slotEl = document.getElementById(`slot-${idx}`);
+          if (!slotEl) return;
           const rect = slotEl.getBoundingClientRect();
           const sx = rect.left + rect.width * 0.5;
           const sy = rect.top + rect.height * 0.25;
@@ -1458,14 +1399,11 @@
       function animate(nowMs) {
         const time = nowMs * 0.001;
 
-        // Smooth mouse interpolation
         state.mouse.x += (state.mouse.tx - state.mouse.x) * 0.06;
         state.mouse.y += (state.mouse.ty - state.mouse.y) * 0.06;
 
-        // Decay glitch intensity
         state.glitchIntensity = Math.max(0, state.glitchIntensity - 0.032);
 
-        // Audio reactivity
         const targetEnergy = state.audioStarted ? audioEngine.getEnergy() : (0.12 + 0.06 * Math.sin(time * 2.0));
         state.audioEnergy += (targetEnergy - state.audioEnergy) * 0.15;
 
@@ -1475,12 +1413,10 @@
           orbCore.setAttribute('r', r.toFixed(2));
         }
 
-        // Climax progression (0 -> 1 over 5000ms)
         if (state.climaxActive) {
           state.climaxProgress = Math.min(1, (nowMs - state.climaxStartTime) / 5000);
         }
 
-        // Spring physics for chain locking animations
         [0, 1, 2].forEach((idx) => {
           if (state.locked[idx] && state.chainProgress[idx] < 1.0) {
             state.chainProgress[idx] = Math.min(1.0, state.chainProgress[idx] + 0.045);
@@ -1488,7 +1424,6 @@
           renderChainsForSlot(idx, time);
         });
 
-        // Render WebGL Shader
         if (gl && program) {
           const lockedCount = state.locked.filter(Boolean).length;
           gl.uniform1f(uniforms.time, time);
@@ -1501,16 +1436,25 @@
           gl.drawArrays(gl.TRIANGLES, 0, 6);
         }
 
-        // Render Foreground FX
         renderForegroundFX(time);
 
         requestAnimationFrame(animate);
       }
 
-      window.onload = () => {
+      function startApp() {
         resizeCanvases();
-        requestAnimationFrame(animate);
-      };
+        if (!state.loopStarted) {
+          state.loopStarted = true;
+          requestAnimationFrame(animate);
+        }
+      }
+
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        startApp();
+      } else {
+        window.addEventListener('DOMContentLoaded', startApp, { once: true });
+      }
+      window.addEventListener('load', resizeCanvases);
     })();
   </script>
 </body>
